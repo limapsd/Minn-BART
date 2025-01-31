@@ -1,4 +1,4 @@
-load(paste0("/MacroUncQ.rda"))
+load("MacroUncQ.rda")
 
 library(stochtree)
 
