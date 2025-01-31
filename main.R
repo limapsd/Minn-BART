@@ -1,5 +1,5 @@
 
-model_names <- c("bart", "dart", "minn", "bartfsv", "dartfsv", "minnfsv")
+model_names <- c("bart", "dart", "minn", "bart_fsv", "dart_fsv", "minn_fsv")
 n_models <-length(model_names)
 
 if("Results" %in% list.files() == FALSE) dir.create("Results")
