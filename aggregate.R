@@ -41,5 +41,5 @@ for(model in model_name){
 }
 
 aggregation <- list("forecast" = point_forecasts_array,"vol_forecast" = volatilty_forecasts_array, "var_count" = var_count_array)
-saveRDS(aggregation,file = paste0("/Aggregation/"))
+saveRDS(aggregation,file = paste0("Aggregation/aggr.rds"))
 
