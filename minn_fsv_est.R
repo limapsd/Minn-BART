@@ -21,7 +21,7 @@ for(i in 1:(T1-T0-h)){
   
   print(paste0("Expanding Window... ", i))
   
-  model <- stochtree::fsv_mbart(data = y_train, Y_test = y_test, n_ahead = h, lags = 13, bart_prior = "minn", num_burnin = num_burnin, num_mcmc = num_mcmc)
+  model <- stochtree::fsv_mbart(data = y_train, Y_test = y_test, n_ahead = h, lags = 13, bart_prior = "minn", SV= TRUE, num_burnin = num_burnin, num_mcmc = num_mcmc)
   
   saveRDS(model, file = paste0("Results/minnfsv_window_",i,".rds"))
   rm(model)
