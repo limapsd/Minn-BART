@@ -8,7 +8,7 @@ if("Logs" %in% list.files() == FALSE) dir.create("Logs")
 
 for(i in 1:n_models){
     scripts_name <- paste0(model_names[i],"_est.R")   
-    batch.script <- paste0("nice Rscript --verbose ",scripts_name," 2>&1 Logs/")
+    batch.script <- paste0("nice Rscript --verbose ", scripts_name," 2>&1 Logs/", model_names[i],".txt &")
 
     system(batch.script)
     Sys.sleep(5)
