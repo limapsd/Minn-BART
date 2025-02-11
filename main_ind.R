@@ -6,7 +6,7 @@ main <- function(){
     if (!"Aggregation" %in% list.files()) dir.create("Aggregation")
     if (!"Logs" %in% list.files()) dir.create("Logs")
 
-    model_names <- c("bart", "dart", "minn", "bart_fsv", "dart_fsv", "minn_fsv")
+    model_names <- c("bart", "dart", "minn", "bart_fsv", "dart_fsv", "minn_fsv", "bvarsv")
     
     # Handle missing argument case
     if (length(args) < 1) {

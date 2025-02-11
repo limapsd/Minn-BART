@@ -22,8 +22,18 @@ for(i in 1:(T1-T0-h)){
   print(paste0("Expanding Window... ", i))
   
   model <- stochtree::fsv_mbart(data = y_train, Y_test = y_test, n_ahead = h, lags = 13, bart_prior = "dart", SV=TRUE, num_burnin = num_burnin, num_mcmc = num_mcmc)
+
+  predictions <- model$predictions
+  volatility  <- model$sigma_predictions
+  var_count   <- model$var_count_matrix
+  LPL         <- model$LPL
+  LPL_uni     <- model$LPL_univariate
+    
+  saved_info<-list("predictions" = predictions, "volatility" = volatility,
+                     "var_count" =var_count,"LPL" = LPL, "LPL_uni" = LPL_uni)
   
-  saveRDS(model, file = paste0("Results/dartfsv_window_",i,".rds"))
+
+  saveRDS(saved_info, file = paste0("Results/dartfsv_window_",i,".rds"))
   rm(model)
   gc()
 }

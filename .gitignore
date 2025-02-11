@@ -1,0 +1,6 @@
+.rds
+Aggregation/
+Logs/
+Results/
+.DS_store
+.Rhistory

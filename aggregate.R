@@ -11,7 +11,7 @@ estimation_window <-  T1-T0-h
 
 x_names <- paste0(var.sets$`VAR-22`, ".t-", sort(rep(1:lags,M)))
 
-model_names <- c("bart", "dart", "minn", "bartfsv", "dartfsv", "minnfsv")
+model_names <- c("bart", "dart", "minn", "bart_fsv", "dart_fsv", "minn_fsv")
 num_models <- length(model_name)
 
 point_forecasts_array <- array(data = NA, c(estimation_window, h, M, num_models))
