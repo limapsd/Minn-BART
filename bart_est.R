@@ -11,8 +11,9 @@ T0 <- 160
 T1 <- nrow(yraw_f)
 h  <- 4
 
-num_burnin <-20000
-num_mcmc   <-10000
+num_burnin <-30000
+num_mcmc   <-5000
+
 
 for(i in 1:(T1-T0-h)){
   
